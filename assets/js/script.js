@@ -113,8 +113,8 @@ cbApp.init = () => {
           render: "canvas",  // 'canvas' or 'table'. Default value is 'canvas'
           background: "#ffffff",
           foreground: "#000000",
-          width: 150,
-          height: 150
+          width: 400,
+          height: 400
         });
         
         // .qrcode({
