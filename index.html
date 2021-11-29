@@ -11,7 +11,7 @@
   <title>cbSays</title>
 </head>
 <body id="formPage">
-  <section id="cb-form" class="main-form">
+  <section id="cb-form" class="main-form hideSection">
     <div class="container m-auto">
       <div class="row">
         <div class="col-8 offset-2">
@@ -31,6 +31,10 @@
             <div class="form-group">
               <label for="title-input">Title: </label>
               <input type="text" class="form-control user-input" id="title-input" placeholder="Merry Christmas Bitches!" required>
+            </div>
+            <div class="form-group">
+              <label for="subtitle-input">Subtitle: </label>
+              <input type="text" class="form-control user-input" id="subtitle-input" placeholder="From this hoe">
             </div>
             <div class="form-group">
               <label for="media-input">Upload a video</label>
@@ -56,11 +60,12 @@
     </div>
 
   </section>
-  <section id="cb-card" class="hideSection">
+  <section id="cb-card" class="">
     <div class="container m-auto">
       <div class="row">
         <div class="col-8 offset-2">
-          <h1 class="cardTitle text-centered" id="page-title"></h1>
+          <h1 class="cardTitle text-centered" id="cardTitle-html">Seasons greetings</h1>
+          <h2 class="cardSubtitle text-centered" id="cardSubtitle-html">From your vacationeer</h2>
         </div>
       </div>
       <div id="cardVideo" class="row">
@@ -71,23 +76,18 @@
               style="position: absolute; top: 0px; left: 0px; width: 100%; height: 100%;"></iframe></div>
         </div>
       </div>
-      <div id="cardTranscript" class="row mt-3 mb-5">
+      <div id="cardMessage" class="row mt-3 mb-5">
         <div class="col-8 offset-2">
           <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#collapseExample"
             aria-expanded="false" aria-controls="collapseExample">
-            View transcript 
+            Hi! Hello! I want to wish you...
           </button>
           
           <div class="collapse" id="collapseExample">
-            <div id="cardTranscript-html" class="card card-body">
-              
+            <div id="cardMessage-html" class="card card-body">
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas atque culpa sed quo deleniti cum nulla iure quis quisquam minus temporibus sunt veritatis, ex libero tempore qui at ad autem, esse in ducimus eum, repellat eaque. Fugit aliquam adipisci ipsam, in vero atque consectetur deleniti modi nobis earum ex molestias hic dolorum aut quidem perferendis explicabo maiores, animi error laboriosam suscipit. Officiis, enim molestias! Velit commodi, perferendis porro neque facere exercitationem unde repellendus nobis quasi id expedita. Eligendi nam assumenda pariatur. Voluptate molestiae blanditiis quos voluptatem, optio temporibus culpa facilis error aliquid laboriosam provident, cupiditate rerum ea dolorem vitae harum!</p>
             </div>
           </div>
-        </div>
-      </div>
-      <div id="cardMessage" class="row">
-        <div id="cardMessage-html" class="col-8 offset-2">
-
         </div>
       </div>
     </div>
@@ -103,6 +103,6 @@
 <!-- <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script> -->
 <script type="text/javascript" src="assets\plugins\qrCode.js"></script>
 
-  <script src="assets\js\script.js"></script>
+  <!-- <script src="assets\js\script.js"></script> -->
 </body>
 </html>

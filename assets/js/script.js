@@ -34,8 +34,10 @@ cbApp.paragraphBuilder = function(string, id) {
   })
 }
 
-cbApp.cardCreator = function (title, video, transcript, message) {
-  $('#page-title').text(title);
+cbApp.cardCreator = function (title, subtitle, video, transcript, message) {
+  $('#cardTitle-html').text(title);
+  subtitle ? $('#cardTitle-html').text(subtitle)
+           : $('#cardSubtitle-html').hide();
   video ? $('#cardVideo-html').attr('src', video)
         : $('#cardVideo').hide();
   transcript ? cbApp.paragraphBuilder(transcript, 'cardTranscript-html')
@@ -52,11 +54,12 @@ cbApp.initiateCardPage = function(){
   const cardPage = window.location.href,
         cardUrl = cbApp.getUrlParameter('url-input'),
         cardTitle = cbApp.getUrlParameter('title-input'),
+        cardSubtitle = cbApp.getUrlParameter('subtitle-input'),
         cardVideo = cbApp.getUrlParameter('video-input'),
         cardTranscript = cbApp.getUrlParameter('transcript-text-input'),
         cardMessage = cbApp.getUrlParameter('message-input');
 
-       cbApp.cardCreator(cardTitle, cardVideo, cardTranscript, cardMessage);
+       cbApp.cardCreator(cardTitle, cardSubtitle, cardVideo, cardTranscript, cardMessage);
 
         
 }
