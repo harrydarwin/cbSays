@@ -47,8 +47,9 @@ cbApp.cardCreator = function (title, subtitle, video, transcript, message) {
 }
 
 cbApp.initiateCardPage = function () {
-  $('#cb-form').toggleClass('hideSection');
-  $('#cb-card').toggleClass('hideSection');
+  $('#cb-form, #cb-card, #cardFooter').toggleClass('hideSection');
+  // $('#cb-card').toggleClass('hideSection');
+  // $('#cardFooter').toggleClass('hideSection')
 
   console.log('creating card!')
   const cardPage = window.location.href,
