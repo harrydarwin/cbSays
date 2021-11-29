@@ -100,7 +100,7 @@ cbApp.init = () => {
         console.log(cbApp.allInputs, urlParams);
 
         inputArray.forEach(function(input) {
-          input.empty()
+          input.value = '';
         })
 
         // const mySite = window.location.origin;
