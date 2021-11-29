@@ -95,14 +95,6 @@ cbApp.init = () => {
         })
 
         urlParams = "?" + paramsArray.join('&');
-      
-
-        console.log(cbApp.allInputs, urlParams);
-
-        $(inputArray).each(function(input, thing) {
-          console.log(input, thing)
-          console.log($(input))
-        })
 
         // const mySite = window.location.origin;
         const mySite = window.location.href;
@@ -110,6 +102,10 @@ cbApp.init = () => {
         const newPage = new URL(urlParams, mySite);
         // THIS IS THE NEW URL FOR THE QR CODE TO BUILD THE NEW PAGE WITH!@!!!!
         console.log(newPage.href)
+
+        $('#card-form').each(function () {
+          this.reset();
+        });
 
         $('#qr').qrcode({
           text: newPage.href,
