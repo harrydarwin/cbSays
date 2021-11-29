@@ -109,7 +109,7 @@ cbApp.init = () => {
         console.log(newPage.href)
 
         $('#qr').qrcode({
-          text: "https://moreonfew.com/generate-qr-code-using-jquery",
+          text: newPage.href,
           render: "canvas",  // 'canvas' or 'table'. Default value is 'canvas'
           background: "#ffffff",
           foreground: "#000000",
