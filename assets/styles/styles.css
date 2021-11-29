@@ -3,17 +3,32 @@ html{line-height:1.15;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%}bo
 a { color: inherit; text-decoration: none;}img{ width: 100%; height: auto; display: block;}
 
 
+
+body#formPage {
+  background: rgb(252,232,240);
+  background: linear-gradient(180deg, rgba(252,232,240,1) 0%, rgba(252,232,241,1) 2%, rgba(205,5,44,1) 2%, rgba(205,5,44,1) 22%, rgba(252,232,240,1) 22%, rgba(252,232,240,1) 73%, rgba(153,185,226,1) 73%, rgba(153,185,226,1) 97%, rgba(252,232,240,1) 97%); 
+ 
+}
+
+button, textarea, body, p {
+   font-family: 'Arsenal', sans-serif;
+}
+
+textarea {
+  resize: none;
+}
+
 .main-form {
   height: 100vh;
-}
+ }
 
 /* #FCE8F1;
 #cd052c;
-#99b9b2
+#99b9e2
 #c0abf1 */
+
 #cb-card {
-  min-height: 100vh;
-  
+  min-height: 110vh;
 }
 
 .hideSection {
@@ -22,8 +37,24 @@ a { color: inherit; text-decoration: none;}img{ width: 100%; height: auto; displ
 
 h1 {
   color: #FCE8F1;
+ font-size: 3rem;
+ font-weight: 600;
+}
+h2 {
+  color: #99b9e2;
+  font-weight: 600;
+  font-size: 1.6rem;
+}
+h3 {
+  margin-top: 3%;
+  color: #cd052c;
+  font-size: 4rem;
 }
 
+h1, h3 {
+  font-family: 'Dancing Script', cursive;
+   
+}
 .collapse.show {
   max-height: unset;
   height: auto;
@@ -40,4 +71,84 @@ h1 {
 
 #picture-frame {
   border-radius: 8px;
+  min-height: 400px;
+}
+
+.card-body {
+  background-color: #FCE8F1;
+  border: none;
+  color: #c0abf1;
+  font-weight: 600;
+}
+
+.btn.message-btn{
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+.btn,
+textarea {
+  border-radius: 8px;
+  transition: all .2s ease-out;
+}
+
+.btn.btn-wireframe {
+  border: 2px solid #c0abf1;
+  color: #99b9e2;
+}
+
+.btn.btn-wireframe:hover {
+  background-color: #c0abf1;
+  color: #FCE8F1;
+}
+
+.btn.btn-wireframe:focus {
+  box-shadow: none;
+
+}
+
+.btn.btn-blue {
+  background-color: #99b9e2;
+  border: 2px solid #99b9e2;
+  color: #cd052c;
+}
+
+.btn.btn-blue:hover {
+  border: 2px solid #cd052c;
+}
+
+.socials {
+  color: #cd052c;
+}
+
+.socials a {
+  font-size: 3.6rem;
+  transition: all .2s ease-out;
+}
+
+.socials a:hover {
+  color: #FCE8F1;;
+}
+
+.modal-dialog {
+    max-width: 800px;
+    margin: 14% auto;
+}
+
+.modal-header {
+  background: #cd052c;
+  color: #FCE8F1;
+}
+
+.modal-body label {
+  color: #c0abf1;
+}
+
+.modal-body {
+  background-color: #FCE8F1;
+}
+
+.modal-body .form-control {
+  border: 2px solid #c0abf1;
+  background-color: #FCE8F1;
 }

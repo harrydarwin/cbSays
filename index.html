@@ -5,7 +5,13 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Arsenal:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+  rel="stylesheet">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css"
     integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
   <link rel="stylesheet" href="assets\styles\styles.css">
@@ -69,22 +75,23 @@
     <div class="container m-auto">
       <div class="row">
         <div class="col-8 offset-2">
-          <h1 class="cardTitle text-centered" id="cardTitle-html">Seasons greetings</h1>
-          <h2 class="cardSubtitle text-centered" id="cardSubtitle-html">From your vacationeer</h2>
+          <h1 class="cardTitle text-centered mb-0 pt-3" id="cardTitle-html">Seasons greetings</h1>
+          <h2 class="cardSubtitle text-centered" id="cardSubtitle-html">FROM YOUR VACATIONEER</h2>
         </div>
       </div>
       <div id="cardVideo" class="row">
         <div class="col-8 offset-2">
           <div id="picture-frame"
-            style="position: relative; height: 0px; overflow: hidden; max-width: 100%; padding-bottom: 56.25%;border: 2px solid #000;">
-            <iframe id="cardVideo-html" src="" frameborder="0" scrolling="no" webkitallowfullscreen=""
+              style="position: relative; height: 0px; overflow: hidden; max-width: 100%; padding-bottom: 56.25%;border: 2px solid #000;">
+              <iframe id="cardVideo-html" src="" frameborder="0" scrolling="no" webkitallowfullscreen=""
               mozallowfullscreen="" allowfullscreen="" allow="autoplay; fullscreen"
-              style="position: absolute; top: 0px; left: 0px; width: 100%; height: 100%;"></iframe></div>
+              style="position: absolute; top: 0px; left: 0px; width: 100%; height: 100%;"></iframe>
+            </div>
         </div>
       </div>
-      <div id="cardMessage" class="row mt-3 mb-5">
+      <div id="cardMessage" class="row mt-3 mb-4">
         <div class="col-8 offset-2">
-          <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#collapseExample"
+          <button class="btn btn-wireframe message-btn w-100" type="button" data-toggle="collapse" data-target="#collapseExample"
             aria-expanded="false" aria-controls="collapseExample">
             Hi! Hello! I want to wish you...
           </button>
@@ -103,10 +110,121 @@
           </div>
         </div>
       </div>
+      <div class="row">
+        <div class="col-8 offset-2">
+          <button class="btn btn-blue w-100 mb-3" type="button" data-toggle="modal" data-target="#modalFeedback">Leave feedback</button>
+          <button class="btn btn-blue w-100 mb-3" type="button" data-toggle="modal" data-target="#modalQuote">Request a free quote for 2022</button>
+          <button class="btn btn-blue w-100 mb-3" type="button" data-toggle="modal" data-target="#modalNewsletter">Sign up for my free newsletter</button>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section id="cardFooter">
+    <div class="container">
+      <div class="row be-friends">
+        <div class="col-4 offset-2 d-flex flex-column">
+          <h3>Let's be friends<br> longterm</h3>
+          <div class="socials mt-3">
+            <a class="mr-3" href=""><i class="fab fa-facebook-square"></i></a>
+            <a class="mr-3" href=""><i class="fab fa-instagram"></i></a>
+            <a href=""><i class="fal fa-envelope"></i></a>
+          </div>
+        </div>
+        <div class="col-4"><img src="assets\media\Christmas Disney iPhone Background.png" alt=""></div>
+      </div>
     </div>
   </section>
 
 
+
+
+
+
+
+
+
+
+<!-- ////////// -->
+  <!-- MODALS -->
+<!-- ////////// -->
+
+<div class="modal fade" id="modalFeedback" tabindex="-1" aria-labelledby="modalFeedback-title" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="modalFeedback-title">Leave feedback</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <form id="card-form">
+          <div class="form-group">
+            <label for="email-input-feedback">Email: </label>
+            <input type="email" class="form-control user-input" id="email-input-feedback" placeholder="Your email" required>
+          </div>
+          <div class="form-group">
+            <label for="feedback-input">Feedback: </label>
+            <textarea type="text" class="form-control user-input" id="feedback-input" placeholder="Your comments..." required></textarea>
+          </div>
+          <button type="submit" class="btn btn-wireframe">Submit</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal fade" id="modalQuote" tabindex="-1" aria-labelledby="modalFeedback-title" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="modalFeedback-title">Request a quote</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <form id="card-form">
+          <div class="form-group">
+            <label for="email-input-quote">Email: </label>
+            <input type="email" class="form-control user-input" id="email-input-feedback" placeholder="Your email"
+              required>
+          </div>
+          <div class="form-group">
+            <label for="quote-name-input">Name: </label>
+            <input type="text" class="form-control user-input" id="quote-name-input" placeholder="John doe"
+              required>
+          </div>
+          <div class="form-group">
+            <label for="quote-brief-input">Short project brief: </label>
+            <textarea type="text" class="form-control user-input" id="quote brief-input" placeholder="You elevator pitch and an explanation of what you need" required></textarea> 
+          </div>
+          <button type="submit" class="btn btn-wireframe">Submit</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal fade" id="modalNewsletter" tabindex="-1" aria-labelledby="modalFeedback-title" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="modalFeedback-title">Sign up for my newsletter</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <form id="card-form">
+          <div class="form-group">
+            <label for="email-input-newsletter">Email: </label>
+            <input type="email" class="form-control user-input" id="email-input-feedback" placeholder="Your email"
+              required>
+          </div>
+          <button type="submit" class="btn btn-wireframe">Submit</button>
+      </div>
+    </div>
+  </div>
+</div>
 
   <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
     integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
@@ -117,7 +235,7 @@
 
   <!-- <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script> -->
   <script type="text/javascript" src="assets\plugins\qrCode.js"></script>
-
+<script src="https://kit.fontawesome.com/6c826c10e7.js"></script>
   <!-- <script src="assets\js\script.js"></script> -->
 </body>
 
