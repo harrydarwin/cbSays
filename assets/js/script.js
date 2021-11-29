@@ -68,7 +68,7 @@ cbApp.init = () => {
   // const data = { 'first name': 'George', 'last name': 'Jetson', 'age': 110 };
   // const querystring = cbApp.encodeQueryData(data);
   // console.log(querystring)
-  window.location.href == 'https://harrydarwin.github.io/cbSays/' ?
+  window.location.href == 'file:///c:/Users/harry/OneDrive/Documents/sites/cbSays/index.html' ?
   
       $('#card-form').on('submit', function (e) {
         e.preventDefault();
@@ -109,13 +109,21 @@ cbApp.init = () => {
         console.log(newPage.href)
 
         $('#qr').qrcode({
-          size: 400,
-          fill: '#146B3A',
-          text: newPage.href,
-          mode: 1,
-          label: 'Happy Holidays!',
-          fontcolor: '#BB2528'
+          text: "https://moreonfew.com/generate-qr-code-using-jquery",
+          render: "canvas",  // 'canvas' or 'table'. Default value is 'canvas'
+          background: "#ffffff",
+          foreground: "#000000",
+          width: 150,
+          height: 150
         });
+        
+        // .qrcode({
+        //   size: 400,
+        //   fill: '#000',
+        //   text: newPage.href,
+        //   mode: 1,
+        //   fontcolor: '#BB2528'
+        // });
       
 
       })
