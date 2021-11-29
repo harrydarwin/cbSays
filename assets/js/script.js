@@ -108,14 +108,20 @@ cbApp.init = () => {
         // THIS IS THE NEW URL FOR THE QR CODE TO BUILD THE NEW PAGE WITH!@!!!!
         console.log(newPage.href)
 
-        $('#qr').qrcode(newPage.href);
+        $('#qr').qrcode({
+          text: "https://moreonfew.com/generate-qr-code-using-jquery",
+          render: "canvas",  // 'canvas' or 'table'. Default value is 'canvas'
+          background: "#ffffff",
+          foreground: "#000000",
+          width: 150,
+          height: 150
+        });
         
         // .qrcode({
         //   size: 400,
-        //   fill: '#146B3A',
+        //   fill: '#000',
         //   text: newPage.href,
         //   mode: 1,
-        //   label: 'Happy Holidays!',
         //   fontcolor: '#BB2528'
         // });
       
