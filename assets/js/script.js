@@ -46,21 +46,22 @@ cbApp.cardCreator = function (title, subtitle, video, transcript, message) {
     : $('#cardMessage').hide();
 }
 
-cbApp.initiateCardPage = function(){
+cbApp.initiateCardPage = function () {
   $('#cb-form').toggleClass('hideSection');
   $('#cb-card').toggleClass('hideSection');
 
   console.log('creating card!')
   const cardPage = window.location.href,
-        cardUrl = cbApp.getUrlParameter('url-input'),
-        cardTitle = cbApp.getUrlParameter('title-input'),
-        cardVideo = cbApp.getUrlParameter('video-input'),
-        cardTranscript = cbApp.getUrlParameter('transcript-text-input'),
-        cardMessage = cbApp.getUrlParameter('message-input');
+    cardUrl = cbApp.getUrlParameter('url-input'),
+    cardTitle = cbApp.getUrlParameter('title-input'),
+    cardSubtitle = cbApp.getUrlParameter('subtitle-input'),
+    cardVideo = cbApp.getUrlParameter('video-input'),
+    cardTranscript = cbApp.getUrlParameter('transcript-text-input'),
+    cardMessage = cbApp.getUrlParameter('message-input');
 
-       cbApp.cardCreator(cardTitle, cardVideo, cardTranscript, cardMessage);
+  cbApp.cardCreator(cardTitle, cardSubtitle, cardVideo, cardTranscript, cardMessage);
 
-        
+
 }
 
 cbApp.init = () => {
