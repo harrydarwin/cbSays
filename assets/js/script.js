@@ -99,8 +99,8 @@ cbApp.init = () => {
 
         console.log(cbApp.allInputs, urlParams);
 
-        $(inputArray).each(function(input) {
-          console.log(input)
+        $(inputArray).each(function(input, thing) {
+          console.log(input, thing)
           console.log($(input))
         })
 
