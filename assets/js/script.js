@@ -34,14 +34,16 @@ cbApp.paragraphBuilder = function(string, id) {
   })
 }
 
-cbApp.cardCreator = function (title, video, transcript, message) {
-  $('#page-title').text(title);
+cbApp.cardCreator = function (title, subtitle, video, transcript, message) {
+  $('#cardTitle-html').text(title);
+  subtitle ? $('#cardTitle-html').text(subtitle)
+    : $('#cardSubtitle-html').hide();
   video ? $('#cardVideo-html').attr('src', video)
-        : $('#cardVideo').hide();
+    : $('#cardVideo').hide();
   transcript ? cbApp.paragraphBuilder(transcript, 'cardTranscript-html')
-             : $('#cardTranscript').hide();
+    : $('#cardTranscript').hide();
   message ? cbApp.paragraphBuilder(message, 'cardMessage-html')
-          : $('#cardMessage').hide();
+    : $('#cardMessage').hide();
 }
 
 cbApp.initiateCardPage = function(){
