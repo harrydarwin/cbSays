@@ -100,8 +100,8 @@ cbApp.init = () => {
         console.log(cbApp.allInputs, urlParams);
 
         $(inputArray).each(function(input) {
-          console.log($(this).attr('placeholder'))
-          input.val() = '';
+          console.log(input)
+          console.log($(input))
         })
 
         // const mySite = window.location.origin;
