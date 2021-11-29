@@ -108,14 +108,16 @@ cbApp.init = () => {
         // THIS IS THE NEW URL FOR THE QR CODE TO BUILD THE NEW PAGE WITH!@!!!!
         console.log(newPage.href)
 
-        $('#qr').qrcode({
-          size: 400,
-          fill: '#146B3A',
-          text: newPage.href,
-          mode: 1,
-          label: 'Happy Holidays!',
-          fontcolor: '#BB2528'
-        });
+        $('#qr').qrcode(newPage.href);
+        
+        // .qrcode({
+        //   size: 400,
+        //   fill: '#146B3A',
+        //   text: newPage.href,
+        //   mode: 1,
+        //   label: 'Happy Holidays!',
+        //   fontcolor: '#BB2528'
+        // });
       
 
       })
