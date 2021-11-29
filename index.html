@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css"
+    integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
+    <link rel="stylesheet" href="assets\styles\styles.css">
+  <title>cbSays</title>
+</head>
+<body id="formPage">
+  <section id="cb-form" class="main-form">
+    <div class="container m-auto">
+      <div class="row">
+        <div class="col-8 offset-2">
+          <h1>CB Says</h1>
+        </div>
+        <div class="col-8 offset-2 mb-3">
+          <h2>QR-Card Generator</h2>
+        </div>
+      </div>
+      <div class="row mb-5">
+        <div class="col-8 offset-2">
+          <form id="card-form">
+            <div class="form-group">
+              <label for="url-input">URL endpoint: </label>
+              <input type="text" class="form-control user-input" id="url-input" placeholder="No spaces!" required>
+            </div>
+            <div class="form-group">
+              <label for="title-input">Title: </label>
+              <input type="text" class="form-control user-input" id="title-input" placeholder="Merry Christmas Bitches!" required>
+            </div>
+            <div class="form-group">
+              <label for="media-input">Upload a video</label>
+              <input type="file" class="form-control-file user-input" id="media-input">
+            </div>
+            <div class="form-group">
+              <label for="transcript-text-input">Video transcript text</label>
+              <input type="text" class="form-control user-input" id="transcript-text-input" placeholder="Probably a copy and paste job">
+            </div>
+            <div class="form-group">
+              <label for="message-input">Personal message</label>
+              <input type="text" class="form-control user-input" id="message-input" placeholder="I don't like your hat, here's why. ">
+            </div>
+            <button type="submit" class="btn btn-primary">Submit</button>
+          </form>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-4 offset-4">
+          <div class="qrcode" id="qr"></div>
+        </div>
+      </div>
+    </div>
+
+  </section>
+  <section id="cb-card" class="hideSection">
+    <div class="container m-auto">
+      <div class="row">
+        <div class="col-8 offset-2">
+          <h1 class="cardTitle text-centered" id="page-title"></h1>
+        </div>
+      </div>
+      <div id="cardVideo" class="row">
+        <div class="col-8 offset-2">
+          <div id="picture-frame" style="position: relative; height: 0px; overflow: hidden; max-width: 100%; padding-bottom: 56.25%;border: 2px solid #000;"><iframe id="cardVideo-html"
+              src="" frameborder="0" scrolling="no" webkitallowfullscreen=""
+              mozallowfullscreen="" allowfullscreen="" allow="autoplay; fullscreen"
+              style="position: absolute; top: 0px; left: 0px; width: 100%; height: 100%;"></iframe></div>
+        </div>
+      </div>
+      <div id="cardTranscript" class="row mt-3 mb-5">
+        <div class="col-8 offset-2">
+          <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#collapseExample"
+            aria-expanded="false" aria-controls="collapseExample">
+            View transcript 
+          </button>
+          
+          <div class="collapse" id="collapseExample">
+            <div id="cardTranscript-html" class="card card-body">
+              
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="cardMessage" class="row">
+        <div id="cardMessage-html" class="col-8 offset-2">
+
+        </div>
+      </div>
+    </div>
+  </section>
+  
+
+
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
+  integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"
+  integrity="sha384-fQybjgWLrvvRgtW6bFlB7jaZrFsaBXjsOMm/tB9LTS58ONXgqbR9W8oWht/amnpF" crossorigin="anonymous"></script>
+
+<!-- <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script> -->
+<script type="text/javascript" src="qr-code-logo-label/dist/jquery-qrcode.js"></script>
+  <script src="assets\js\script.js"></script>
+</body>
+</html>
