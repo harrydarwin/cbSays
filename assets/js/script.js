@@ -68,7 +68,7 @@ cbApp.init = () => {
   // const data = { 'first name': 'George', 'last name': 'Jetson', 'age': 110 };
   // const querystring = cbApp.encodeQueryData(data);
   // console.log(querystring)
-  window.location.href == 'file:///c:/Users/harry/OneDrive/Documents/sites/cbSays/index.html' ?
+  window.location.href == 'https://harrydarwin.github.io/cbSays/' ?
   
       $('#card-form').on('submit', function (e) {
         e.preventDefault();
