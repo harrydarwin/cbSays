@@ -99,7 +99,9 @@ cbApp.init = () => {
 
         console.log(cbApp.allInputs, urlParams);
 
-
+        inputArray.forEach(function(input) {
+          input.empty()
+        })
 
         // const mySite = window.location.origin;
         const mySite = window.location.href;
@@ -116,14 +118,7 @@ cbApp.init = () => {
           width: 400,
           height: 400
         });
-        
-        // .qrcode({
-        //   size: 400,
-        //   fill: '#000',
-        //   text: newPage.href,
-        //   mode: 1,
-        //   fontcolor: '#BB2528'
-        // });
+      
       
 
       })
