@@ -99,7 +99,7 @@ cbApp.init = () => {
 
         console.log(cbApp.allInputs, urlParams);
 
-        $(inputArray).forEach(function(input) {
+        $(inputArray).each(function(input) {
           console.log($(this).attr('placeholder'))
           input.text($(this).attr('placeholder'))
         })
