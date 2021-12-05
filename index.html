@@ -19,6 +19,32 @@
 </head>
 
 <body id="formPage">
+  <section id="userAuth">
+    <div class="container">
+      <div class="row">
+        <div class="col-8 offset-2">
+          <h1>CB-Says QR-Card Generator</h1>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-8 offset-2">
+          <form id="authForm">
+            <div class="form-group">
+              <label for="inputEmail">Email address</label>
+              <input type="email" class="form-control" id="inputEmail" aria-describedby="emailHelp"
+                placeholder="Enter email">
+              <!-- <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small> -->
+            </div>
+            <div class="form-group">
+              <label for="inputPassword1">Password</label>
+              <input type="password" class="form-control" id="inputPassword1" placeholder="Password">
+            </div>
+            <button type="submit" class="btn btn-wireframe">Submit</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
   <section id="cb-form" class="main-form hideSection">
     <div class="container m-auto">
       <div class="row">
@@ -49,17 +75,17 @@
               <label for="media-input">Upload a video</label>
               <input type="file" class="form-control-file user-input" id="media-input">
             </div>
-            <div class="form-group">
+            <!-- <div class="form-group">
               <label for="transcript-text-input">Video transcript text</label>
               <input type="text" class="form-control user-input" id="transcript-text-input"
                 placeholder="Probably a copy and paste job">
-            </div>
+            </div> -->
             <div class="form-group">
               <label for="message-input">Personal message</label>
               <input type="text" class="form-control user-input" id="message-input"
                 placeholder="I don't like your hat, here's why. ">
             </div>
-            <button type="submit" class="btn btn-primary">Submit</button>
+            <button type="submit" class="btn btn-wireframe">Submit</button>
           </form>
         </div>
       </div>
@@ -71,7 +97,7 @@
     </div>
 
   </section>
-  <section id="cb-card" class="">
+  <section id="cb-card" class="hideSection">
     <div class="container m-auto">
       <div class="row">
         <div class="redStyleBox"></div>
@@ -120,7 +146,7 @@
       </div>
     </div>
   </section>
-  <section id="cardFooter" class="">
+  <section id="cardFooter" class="hideSection">
     <div class="container">
       <div class="row be-friends">
         <div class="col-4 offset-2 d-flex flex-column">
@@ -170,6 +196,7 @@
             <textarea type="text" class="form-control user-input" id="feedback-input" placeholder="Your comments..." required></textarea>
           </div>
           <button type="submit" class="btn btn-wireframe">Submit</button>
+          </form>
       </div>
     </div>
   </div>
@@ -201,6 +228,7 @@
             <textarea type="text" class="form-control user-input" id="quote brief-input" placeholder="You elevator pitch and an explanation of what you need" required></textarea> 
           </div>
           <button type="submit" class="btn btn-wireframe">Submit</button>
+          </form>
       </div>
     </div>
   </div>
@@ -223,11 +251,28 @@
               required>
           </div>
           <button type="submit" class="btn btn-wireframe">Submit</button>
+          </form>
       </div>
     </div>
   </div>
 </div>
 
+<div class="modal fade" id="modalNoAccess" tabindex="-1" aria-labelledby="modalFeedback-title" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="modalFeedback-title"><i class="fal fa-exclamation-circle"></i> Access denied!</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <h4>Unfortunately you do not have access to this page; but worry not, the application will be made public in the near future!</h4>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- bootstrap & Jquery -->
   <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
     integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
     crossorigin="anonymous"></script>
@@ -235,10 +280,21 @@
     integrity="sha384-fQybjgWLrvvRgtW6bFlB7jaZrFsaBXjsOMm/tB9LTS58ONXgqbR9W8oWht/amnpF"
     crossorigin="anonymous"></script>
 
-  <!-- <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script> -->
-  <script type="text/javascript" src="assets\plugins\qrCode.js"></script>
+    <!-- Firebase -->
+<script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-auth.js"></script>
+
+<!-- <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script> -->
+
+<!--local plugins -->
+<script type="text/javascript" src="assets\plugins\qrCode.js"></script>
+
+<!-- fontawesome -->
 <script src="https://kit.fontawesome.com/6c826c10e7.js"></script>
-  <!-- <script src="assets\js\script.js"></script> -->
+
+<!-- my scripts -->
+  <script src="assets\js\script.js"></script>
+
 </body>
 
 </html>

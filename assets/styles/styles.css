@@ -66,6 +66,13 @@ h1, h3 {
   font-family: 'Dancing Script', cursive;
    
 }
+
+label {
+  font-size: 1.2rem;
+  color: #99b9e2;
+
+}
+
 .collapse.show {
   max-height: unset;
   height: auto;
@@ -167,6 +174,22 @@ textarea {
 
 .divider {
   height:22px;
+}
+
+#userAuth {
+  height: 100vh;
+}
+
+#userAuth h1 {
+  color: #99b9e2;;
+}
+
+#card-form {
+  background-color: #FCE8F1;
+  padding: 20px;
+  border-radius: 0.25rem;
+  -webkit-box-shadow: 5px 5px 15px 5px #000000;
+  box-shadow: 5px 5px 15px 5px #000000;
 }
 
 
