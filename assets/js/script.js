@@ -40,8 +40,18 @@ console.log('connected')
 //     const errorMessage = error.message;
 //   });
 
+cbApp.storage = firebase.storage();
+cbApp.storageRef = cbApp.storage.ref();
 
+cbApp.addNewMedia = function() {
+  // Write function for this now
+  console.log('I dont wsnt these errors')
+}
 
+cbApp.grabMedia = function() {
+  // write function for this to
+  console.log('I dont wsnt these errors')
+}
 // Initialize Firebase
 // const app = initializeApp(firebaseConfig);
 // const analytics = getAnalytics(app);
