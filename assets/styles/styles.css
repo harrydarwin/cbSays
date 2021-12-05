@@ -57,9 +57,9 @@ h2 {
   font-size: 1.6rem;
 }
 h3 {
-  margin-top: 3%;
+  /* margin-top: 3%; */
   color: #cd052c;
-  font-size: 4rem;
+  font-size: 3rem;
 }
 
 h1, h3 {
@@ -165,9 +165,19 @@ textarea {
   background-color: #FCE8F1;
 }
 
+.divider {
+  height:22px;
+}
+
+
+@media (max-width: 1400px) {
+  .divider {
+    height: 85px;
+  }
+}
 
 @media (max-width: 1200px) {
-  h3 {
-    margin-top: 18%;
+  .divider {
+    height: 110px;
   }
 }
