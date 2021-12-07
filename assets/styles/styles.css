@@ -192,6 +192,19 @@ textarea {
   box-shadow: 5px 5px 15px 5px #000000;
 }
 
+.loader {
+  /* margin: auto; */
+  border: 20px solid #EAF0F6;
+  border-radius: 50%;
+  border-top: 20px solid #c0abf1;
+  width: 200px;
+  height: 200px;
+  animation: spinner 4s linear infinite;
+  position: absolute;
+  left: calc(50% - 100px);
+  top: calc(50% - 100px);
+}
+
 
 @media (max-width: 1400px) {
   .divider {
@@ -203,4 +216,9 @@ textarea {
   .divider {
     height: 110px;
   }
+}
+
+@keyframes spinner {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
 }
