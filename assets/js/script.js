@@ -17,32 +17,52 @@ console.log('connected')
 const imagePlaceholderURl = 'https://firebasestorage.googleapis.com/v0/b/cbsays-6bb73.appspot.com/o/cbMedia%2Fdisneylandplaceholder.jpg?alt=media&token=a775b233-096a-4fa3-88c2-5021db30861a';
 
 cbApp.currentUploadUrl = '';
-cbApp.mediaList = [];
-// Import the functions you need from the SDKs you need
+cbApp.emailKey = 'Iw8lmZn9NOIqhSCGon5rvw';
+cbApp.myEmail = 'cecilica@vacationeer.com'
 
-// cbApp.auth = getAuth();
-// createUserWithEmailAndPassword(cbApp.auth, email, password)
-//   .then((userCredential) => {
-//     // Signed in 
-//     const user = userCredential.user;
-//     // ...
-//   })
-//   .catch((error) => {
-//     const errorCode = error.code;
-//     const errorMessage = error.message;
-//     // ..
-//   });
+function sendMail(userEmail, userFeedback) {
+  $.ajax({
+    type: "POST",
+    url: "https://mandrillapp.com/api/1.0/messages/send.json",
+    data: {
+      'key': cbApp.emailKey,
+      'message': {
+        'from_email': cbApp.myEmail,
+        'to': [
+          {
+            'email': cbApp.myEmail,
+            'name': ' ',
+            'type': ' '
+          }
+        ],
+        'subject': 'New card feedback ',
+        'html': 'User email: ' + userEmail + '<br> Feedback: ' + userFeedback 
+      }
+    }
+  }).then(console.log('EMAIL SENT?!'));
+}
 
-// signInWithEmailAndPassword(auth, email, password)
-//   .then((userCredential) => {
-//     // Signed in 
-//     const user = userCredential.user;
-//     // ...
-//   })
-//   .catch((error) => {
-//     const errorCode = error.code;
-//     const errorMessage = error.message;
-//   });
+
+
+cbApp.activateFeedbackForm = function() {
+  $('#modalFeedback').on('shown.bs.modal', function (event) {
+    console.log('modal up')
+    $('#card-form-feedback').on('submit', function (e) {
+      e.preventDefault();
+console.log('form submit')
+      const userEmail = $('#email-input-feedback').val();
+      const userFeedback = $('#feedback-input').val();
+      // const emailMessage = 'User email: ' + userEmail + '\n Message: ' + userFeedback;
+
+      sendMail(userEmail, userFeedback);
+      // mandrill._domainkey.ceciliabrush.com
+// v=DKIM1; k=rsa; p=MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQCrLHiExVd55zd/IQ/J/mRwSRMAocV/hMB3jXwaHH36d9NaVynQFYV8NaWi69c1veUtRzGt7yAioXqLj7Z4TeEUoOLgrKsn8YnckGs9i3B3tVFB+Ch/4mPhXWiNfNdynHWBcPcbJ8kjEQ2U8y78dHZj1YeRXXVvWob2OaKynO8/lQIDAQAB;
+    })
+  })
+
+}
+
+
 cbApp.getFileType = function(file) {
   let fileName, fileExtension;
   fileName = file;
@@ -325,7 +345,7 @@ cbApp.initiateCardPage = function () {
     cardMessage = cbApp.getUrlParameter('message-input');
 
   cbApp.cardCreator(cardTitle, cardSubtitle, cardVideo, cardTranscript, cardMessage);
-
+  cbApp.activateFeedbackForm();
 
 }
 
@@ -336,7 +356,7 @@ cbApp.init = () => {
   // const querystring = cbApp.encodeQueryData(data);
   // console.log(querystring)
   // window.location.href == 'https://harrydarwin.github.io/cbSays/'
-  window.location.href == 'file:///c:/Users/harry/OneDrive/Documents/sites/cbSays/index.html' ?
+  window.location.hash == '' ?
     
       cbApp.authenticateUser()
       
@@ -360,3 +380,26 @@ cbApp.init = () => {
 
 
   });
+
+
+
+//   Host name
+
+// Type
+// TTL
+// Data
+// ceciliabrush.com	MX	1 hour
+// 1 aspmx.l.google.com.
+// 5 alt1.aspmx.l.google.com.
+// 5 alt2.aspmx.l.google.com.
+// 10 alt3.aspmx.l.google.com.
+// 10 alt4.aspmx.l.google.com.
+
+//   ceciliabrush.com	SPF	1 hour
+// "v=spf1 include:_spf.google.com ~all"
+
+// ceciliabrush.com	TXT	1 hour
+// "v=spf1 include:_spf.google.com ~all"
+
+// google._domainkey.ceciliabrush.com	TXT	1 hour
+// "v=DKIM1; k=rsa; p=MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAjkiDnblAh7R2lhMscEJZjUL2Gmo2bKLbS7bAN/onSumIvJ7qWu3vVig0EYrErVimGA063v473mV/VU86UsN/6xDWvSpSWEk1/RoBDCF8+k0GD8eT9UCjR7N69WFV8u09ZiCVD4ICm9tDAUy6aF53G7H5uJ50vCca/jx8IXI218n9tW7gv6WCylmhFGZquiUzq" "oWiXjOXDD+zJ/GiGyanpjqatBwD4TFeQVJ5YihjEa/O7I71vQbOmjH9MA/mc+ySUjl9DsMKLGlTFYpnjIaO7i2BxdVYqe7PxeLoT0KCxOsaXHX7ddkj61Vv6AZdQYCiil0ZlmrDV2OkiZ+L62jNbQIDAQAB" 
