@@ -125,7 +125,7 @@ cbApp.addNewMedia = function(file) {
       uploadTask.snapshot.ref.getDownloadURL().then((downloadURL) => {
         console.log('File available at', downloadURL);
         cbApp.currentUploadUrl = downloadURL;
-        cbApp.mediaList.push(downloadURL)
+        // cbApp.mediaList.push(downloadURL)
       });
     }
   );
