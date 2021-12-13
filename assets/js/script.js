@@ -358,12 +358,12 @@ cbApp.init = () => {
   // console.log(querystring)
   // window.location.href == 'https://harrydarwin.github.io/cbSays/'
   // console.log(window.location.hash)
-  window.location.href == 'http://www.ceciliabrush.com/' ?
+  window.location.href.includes('input') ?
     
-      cbApp.authenticateUser()
-      
+  
+  cbApp.initiateCardPage()
   :
-      cbApp.initiateCardPage();
+  cbApp.authenticateUser();
   
 }
 
