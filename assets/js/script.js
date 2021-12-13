@@ -357,8 +357,8 @@ cbApp.init = () => {
   // const querystring = cbApp.encodeQueryData(data);
   // console.log(querystring)
   // window.location.href == 'https://harrydarwin.github.io/cbSays/'
-  console.log(window.location.hash)
-  window.location.hash == '' ?
+  // console.log(window.location.hash)
+  window.location.href == 'http://www.ceciliabrush.com/' ?
     
       cbApp.authenticateUser()
       
