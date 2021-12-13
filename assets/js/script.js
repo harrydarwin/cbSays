@@ -331,6 +331,7 @@ cbApp.createNewQrCode = function() {
 }
 
 cbApp.initiateCardPage = function () {
+  console.log('card page')
   $('#cb-card, #cardFooter, #userAuth').toggleClass('hideSection');
   // $('#cb-card').toggleClass('hideSection');
   // $('#cardFooter').toggleClass('hideSection')
@@ -356,6 +357,7 @@ cbApp.init = () => {
   // const querystring = cbApp.encodeQueryData(data);
   // console.log(querystring)
   // window.location.href == 'https://harrydarwin.github.io/cbSays/'
+  console.log(window.location.hash)
   window.location.hash == '' ?
     
       cbApp.authenticateUser()
