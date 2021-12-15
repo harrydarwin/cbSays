@@ -148,7 +148,8 @@ cbApp.grabAndSetMedia = function (fileName, folder) {
     //  setTimeout(function(){
        urlString.includes('jpg') || urlString.includes('jpeg') || urlString.includes('png')
          ? $('#picture-frame').html('<img src="' + url + '" alt="Disneyland castle lit up for the holidays">')
-         : $('#picture-frame').html('<iframe class="wrapped-iframe" src="' + url + '" gesture="media" allow="encrypted-media" allowfullscreen></iframe>')
+         : $('#picture-frame').html('  <video id = "my-video" class= "video-js"  controls  preload = "auto"  width = "640"  height = "264" poster = "MY_VIDEO_POSTER.jpg" data - setup="{}">  <source src="' + url + '" type="video/mp4" /> <source src="' + url + '" type="video/webm" /><p class="vjs-no-js">To view this video please enable JavaScript, and consider upgrading to a web browser that <a href="https://videojs.com/html5-video-support/" target="_blank">supports HTML5 video</a></p></video >')
+        //  .html('<iframe class="wrapped-iframe cardVideo-html" src="' + url + '" gesture="media" allow="encrypted-media" allowfullscreen></iframe>')
         //  $('#picture-frame').html('<iframe id="cardVideo-html" src="' + url + '" frameborder="0" scrolling="no" webkitallowfullscreen="" mozallowfullscreen = "" allowfullscreen = "" allow = "autoplay; fullscreen"style = "position: absolute; top: 0px; left: 0px; width: 100%; height: 100%;" ></iframe >')
     //  }, 2000) 
     })

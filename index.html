@@ -12,6 +12,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Arsenal:ital,wght@0,400;0,700;1,400;1,700&display=swap"
   rel="stylesheet">
+  <link href="https://vjs.zencdn.net/7.17.0/video-js.css" rel="stylesheet" />
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css"
     integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
   <link rel="stylesheet" href="assets\styles\styles.css">
@@ -75,6 +76,7 @@
             <div class="form-group">
               <label for="media-input">Upload a video</label>
               <input type="file" class="form-control-file user-input" id="media-input">
+              <!-- <a href="https://www.freeconvert.com/document-converter" target="_blank">Document Converter</a> -->
             </div>
             <!-- <div class="form-group">
               <label for="transcript-text-input">Video transcript text</label>
@@ -108,7 +110,7 @@
         </div>
       </div>
       <div id="cardVideo" class="row">
-        <div class="col-8 offset-2 wrap-element" id="picture-frame">
+        <div class="col-8 offset-2 loader" id="picture-frame">
           <!-- <div id="picture-frame"
               style="position: relative; height: 0px; overflow: hidden; max-width: 100%; padding-bottom: 56.25%;border: 2px solid #000;">
               <div class="loader"></div>
@@ -280,6 +282,9 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-fQybjgWLrvvRgtW6bFlB7jaZrFsaBXjsOMm/tB9LTS58ONXgqbR9W8oWht/amnpF"
     crossorigin="anonymous"></script>
+
+    <!-- video.js -->
+    <script src="https://vjs.zencdn.net/7.17.0/video.min.js"></script>
 
     <!-- Firebase -->
 <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
