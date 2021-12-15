@@ -224,11 +224,7 @@ textarea {
         border: 0;
       }
 
-#my-video {
-    max-width: 500px;
-    max-height: 700px;
-    margin: auto;
-}
+
 
 .video-js {
     width: 100%;
@@ -249,7 +245,11 @@ textarea {
 }
 
 @media (max-width: 768px){
-  
+  #my-video {
+    max-width: 500px;
+    max-height: 700px;
+    margin: auto;
+}
 }
 
 @keyframes spinner {
