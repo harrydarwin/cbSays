@@ -280,7 +280,9 @@ textarea {
     margin: auto;
   }
 
-  
+  .be-friends {
+    flex-wrap: nowrap;
+  }
 
 }
 
