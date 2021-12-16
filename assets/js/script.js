@@ -167,7 +167,7 @@ cbApp.grabAndSetMedia = function (fileName, folder) {
       //  }, 2000) 
            videojs('my_video_1', {
             //  poster: "assets/media/disneylandplaceholder.jpg",
-             fluid="true"
+             fluid: "true"
            });
       })
       .catch((error) => {
