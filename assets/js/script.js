@@ -191,6 +191,9 @@ cbApp.grabAndSetMedia = function (fileName, folder) {
         }
       });
   }
+  $('.vjs-big-play-button').on('click', function() {
+    $('#picture-frame').removeClass('still-loading');
+  })
 }
 // Initialize Firebase
 // const app = initializeApp(firebaseConfig);

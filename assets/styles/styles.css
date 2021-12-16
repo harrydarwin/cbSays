@@ -277,6 +277,33 @@ textarea {
 }
 }
 
+@media(min-width:1200px) {
+  .video-js .vjs-control-bar {
+    width: 90%;
+    max-width: 230px;
+    left: 32.5%;
+    bottom: 18px;
+}
+}
+
+@media(min-width: 992px) {
+  .video-js .vjs-control-bar {
+    left: 29.5%;
+  }
+}
+
+@media(min-width: 768px) {
+  .video-js .vjs-control-bar {
+    left: 23%;
+  }
+}
+
+@media (min-width: 576px) {
+   .video-js .vjs-control-bar {
+     left: 14%;
+   }
+}
+
 @keyframes spinner {
   0% { transform: rotate(0deg); }
   100% { transform: rotate(360deg); }
