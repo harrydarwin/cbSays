@@ -136,7 +136,10 @@ cbApp.addNewMedia = function(file) {
 
 cbApp.grabAndSetMedia = function (fileName, folder) {
   if (fileName === "CeciliaBrush_MC.mp4"){
-    videojs('my_video_1');
+    videojs('my_video_1', {
+      poster: "assets/media/disneylandplaceholder.jpg",
+      fluid="true"
+    });
   } else {
     
     console.log('grabbing and setting')
@@ -162,7 +165,10 @@ cbApp.grabAndSetMedia = function (fileName, folder) {
           //  .html('<iframe class="wrapped-iframe cardVideo-html" src="' + url + '" gesture="media" allow="encrypted-media" allowfullscreen></iframe>')
           //  $('#picture-frame').html('<iframe id="cardVideo-html" src="' + url + '" frameborder="0" scrolling="no" webkitallowfullscreen="" mozallowfullscreen = "" allowfullscreen = "" allow = "autoplay; fullscreen"style = "position: absolute; top: 0px; left: 0px; width: 100%; height: 100%;" ></iframe >')
       //  }, 2000) 
-           videojs('my_video_1');
+           videojs('my_video_1', {
+            //  poster: "assets/media/disneylandplaceholder.jpg",
+             fluid="true"
+           });
       })
       .catch((error) => {
         // A full list of error codes is available at
