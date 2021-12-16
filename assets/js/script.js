@@ -148,7 +148,8 @@ cbApp.grabAndSetMedia = function (fileName, folder) {
     //  setTimeout(function(){
        urlString.includes('jpg') || urlString.includes('jpeg') || urlString.includes('png')
          ? $('#picture-frame').html('<img src="' + url + '" alt="Disneyland castle lit up for the holidays">')
-         : $('#picture-frame').html('<video-js id="my_video_1" class="vjs-default-skin" controls preload="auto" width="640" height="268"><source src = "' + url + '" type = "application/x-mpegURL"></video-js>');
+         : $('#picture-frame').html('<video controls id="myvideo"><source src="' + url + '" ></source><source src="somevideo.mp4"></source></video >')
+        //  html('<video-js id="my_video_1" class="vjs-default-skin" controls preload="auto" width="640" height="268"><source src = "' + url + '" type = "application/x-mpegURL"></video-js>');
         //  .html('<iframe class="wrapped-iframe cardVideo-html" src="' + url + '" gesture="media" allow="encrypted-media" allowfullscreen></iframe>')
         //  $('#picture-frame').html('<iframe id="cardVideo-html" src="' + url + '" frameborder="0" scrolling="no" webkitallowfullscreen="" mozallowfullscreen = "" allowfullscreen = "" allow = "autoplay; fullscreen"style = "position: absolute; top: 0px; left: 0px; width: 100%; height: 100%;" ></iframe >')
     //  }, 2000) 
