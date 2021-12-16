@@ -274,7 +274,13 @@ textarea {
     max-width: 500px;
     max-height: 700px;
     margin: auto;
-}
+  }
+
+  .footer-image {
+    position: absolute;
+    bottom: 6%;
+  }
+
 }
 
 @media(min-width:1200px) {
@@ -290,6 +296,7 @@ textarea {
   .video-js .vjs-control-bar {
     left: 29.5%;
   }
+
 }
 
 @media(min-width: 768px) {
