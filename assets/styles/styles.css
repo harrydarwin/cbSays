@@ -257,6 +257,10 @@ textarea {
     background-color: rgba(43, 51, 63, 0.7);
 }
 
+.footer-image {
+  background-image: url(assets\media\holidayFooter.png);
+}
+
 @media (max-width: 1400px) {
   .divider {
     height: 85px;
@@ -276,10 +280,7 @@ textarea {
     margin: auto;
   }
 
-  .footer-image {
-    position: absolute;
-    bottom: 6%;
-  }
+  
 
 }
 
