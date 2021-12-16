@@ -144,7 +144,9 @@ cbApp.grabAndSetMedia = function (fileName, folder) {
     console.log(mediaRef)
   // Get the download URL
   mediaRef.getDownloadURL()
+  console.log(mediaRef.getMEtadata())
     .then((url) => {
+      console.log(url)
       const urlString = url.toString();
       console.log(urlString)
     //  setTimeout(function(){
