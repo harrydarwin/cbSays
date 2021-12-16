@@ -135,6 +135,7 @@ cbApp.addNewMedia = function(file) {
 }
 
 cbApp.grabAndSetMedia = function (fileName, folder) {
+  console.log('grabbing and setting')
  let mediaRef; 
 
  // Create a reference to the file we want to download
