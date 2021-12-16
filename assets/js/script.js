@@ -145,6 +145,7 @@ cbApp.grabAndSetMedia = function (fileName, folder) {
     .then((url) => {
       console.log(url.toString())
       const urlString = url.toString();
+      console.log(urlString)
     //  setTimeout(function(){
        urlString.includes('jpg') || urlString.includes('jpeg') || urlString.includes('png')
          ? $('#picture-frame').html('<img src="' + url + '" alt="Disneyland castle lit up for the holidays">')
