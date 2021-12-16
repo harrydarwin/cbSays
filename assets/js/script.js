@@ -239,12 +239,12 @@ cbApp.cardCreator = function (title, subtitle, video, transcript, message) {
     : $('#cardMessage').hide();
 
         console.log('hello time')
-        // if (video) {
-        //   console.log(video)
-        //   cbApp.grabAndSetMedia(video)
-        // } else {
-        //   $('#picture-frame').html('<img src="' + imagePlaceholderURl + '" alt="Disneyland castle lit up for the holidays">');
-        // }
+        if (video) {
+          console.log(video)
+          cbApp.grabAndSetMedia(video)
+        } else {
+          $('#picture-frame').html('<img src="' + imagePlaceholderURl + '" alt="Disneyland castle lit up for the holidays">');
+        }
      
 }
 
