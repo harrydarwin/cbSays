@@ -90,7 +90,7 @@ label {
 #picture-frame {
   border-radius: 8px;
   min-height: 400px;
-  background: #fff;
+  background-color: transparent;
 }
 
 .card-body {
@@ -230,6 +230,7 @@ textarea {
     width: auto;
     height: 430px;
     z-index: 100;
+    background-color: transparent;
 }
 .__web-inspector-hide-shortcut__{
   visibility: visible !important;
@@ -242,6 +243,7 @@ textarea {
 .video-js .vjs-control-bar {
     width: 90%;
     left: 5%;
+    bottom: 18px;
 }
 .video-js .vjs-fullscreen-control {
     cursor: pointer;
