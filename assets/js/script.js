@@ -140,7 +140,8 @@ cbApp.grabAndSetMedia = function (fileName, folder) {
 
  // Create a reference to the file we want to download
   folder ? mediaRef = cbApp.storageRef.child(folder + '/' + fileName)
-    : mediaRef = cbApp.storageRef.child('cbMedia/' + fileName);
+    : console.log('NO FUCKING FOLDEER')
+    // mediaRef = cbApp.storageRef.child('cbMedia/' + fileName);
   // Get the download URL
   mediaRef.getDownloadURL()
     .then((url) => {
