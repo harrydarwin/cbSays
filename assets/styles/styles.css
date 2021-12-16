@@ -92,6 +92,9 @@ label {
   min-height: 400px;
   background-color: transparent;
 }
+#picture-frame.still-loading {
+  background-color: #fff;
+}
 
 .card-body {
   background-color: #FCE8F1;
