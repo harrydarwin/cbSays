@@ -143,7 +143,7 @@ cbApp.grabAndSetMedia = function (fileName, folder) {
     : mediaRef = cbApp.storageRef.child('cbMedia/' + fileName);
     console.log(mediaRef)
   // Get the download URL
-  console.log(mediaRef.getBytes())
+
   mediaRef.getDownloadURL()
   // console.log(mediaRef.getMetadata())
     .then((url) => {
@@ -234,12 +234,12 @@ cbApp.cardCreator = function (title, subtitle, video, transcript, message) {
     : $('#cardMessage').hide();
 
         console.log('hello time')
-        if (video) {
-          console.log(video)
-          cbApp.grabAndSetMedia(video)
-        } else {
-          $('#picture-frame').html('<img src="' + imagePlaceholderURl + '" alt="Disneyland castle lit up for the holidays">');
-        }
+        // if (video) {
+        //   console.log(video)
+        //   cbApp.grabAndSetMedia(video)
+        // } else {
+        //   $('#picture-frame').html('<img src="' + imagePlaceholderURl + '" alt="Disneyland castle lit up for the holidays">');
+        // }
      
 }
 
