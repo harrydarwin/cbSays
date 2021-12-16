@@ -258,7 +258,7 @@ textarea {
 }
 
 .footer-image {
-  background-image: url(assets\media\holidayFooter.png);
+  background-image: url(/assets/media/holidayFooter.png);
 }
 
 @media (max-width: 1400px) {
