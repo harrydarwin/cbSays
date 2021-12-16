@@ -138,7 +138,7 @@ cbApp.grabAndSetMedia = function (fileName, folder) {
   if (fileName === "CeciliaBrush_MC.mp4"){
     videojs('my_video_1', {
       poster: "assets/media/disneylandplaceholder.jpg",
-      fluid="true"
+      fluid: "true"
     });
   } else {
     
