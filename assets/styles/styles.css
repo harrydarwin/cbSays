@@ -239,6 +239,18 @@ textarea {
     top: calc(50% - 1.63332em) !important;
     left: calc(50% - 1.5em) !important;
 }
+.video-js .vjs-control-bar {
+    width: 90%;
+    left: 5%;
+}
+.video-js .vjs-fullscreen-control {
+    cursor: pointer;
+    flex: none;
+    position: absolute;
+    right: 0;
+    bottom: 100%;
+    background-color: rgba(43, 51, 63, 0.7);
+}
 
 @media (max-width: 1400px) {
   .divider {
