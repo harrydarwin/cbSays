@@ -235,6 +235,11 @@ textarea {
   visibility: visible !important;
 }
 
+.video-js .vjs-big-play-button {
+    top: calc(50% - 1.63332em) !important;
+    left: calc(50% - 1.5em) !important;
+}
+
 @media (max-width: 1400px) {
   .divider {
     height: 85px;
