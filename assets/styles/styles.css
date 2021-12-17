@@ -286,6 +286,14 @@ textarea {
 
 }
 
+@media (max-width:473px) {
+  .socials {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
 @media(min-width:1200px) {
   .video-js .vjs-control-bar {
     width: 90%;
