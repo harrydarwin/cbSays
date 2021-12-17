@@ -33,10 +33,10 @@ textarea {
 .redStyleBox {
   background-color: #cd052c;
   position: absolute;
-  height: 38%;
+  height: 50%;
   width: 90%;
   left: 0;
-  border-radius: 8px;
+  border-radius: 0 0 8px 0;
 }
 
 #cb-card {
