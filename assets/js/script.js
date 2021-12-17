@@ -16,9 +16,13 @@ firebase.initializeApp(firebaseConfig);
 console.log('connected')
 const imagePlaceholderURl = 'https://firebasestorage.googleapis.com/v0/b/cbsays-6bb73.appspot.com/o/cbMedia%2Fdisneylandplaceholder.jpg?alt=media&token=a775b233-096a-4fa3-88c2-5021db30861a';
 
+
+cbApp.clientId = "222741539857 - p111s1t4kcgng32tamt38chc1lis13l8.apps.googleusercontent.com";
+cbApp.apiKey = "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";
+cbApp.scopes = 'https://www.googleapis.com/auth/gmail.readonly ' + 'https://www.googleapis.com/auth/gmail.send';
 cbApp.currentUploadUrl = '';
 cbApp.emailKey = 'Iw8lmZn9NOIqhSCGon5rvw';
-cbApp.myEmail = 'cecilica@vacationeer.com'
+cbApp.myEmail = 'cecilia@vacationeer.com'
 
 function sendMail(userEmail, userFeedback) {
   $.ajax({
@@ -32,13 +36,15 @@ function sendMail(userEmail, userFeedback) {
           {
             'email': cbApp.myEmail,
             'name': ' ',
-            'type': ' '
+            'type': ' to'
           }
         ],
         'subject': 'New card feedback ',
         'html': 'User email: ' + userEmail + '<br> Feedback: ' + userFeedback 
       }
     }
+  }).done(function(response) {
+    console.log(response)
   }).then(console.log('EMAIL SENT?!'));
 }
 
@@ -55,6 +61,8 @@ console.log('form submit')
       // const emailMessage = 'User email: ' + userEmail + '\n Message: ' + userFeedback;
 
       sendMail(userEmail, userFeedback);
+      $('#email-input-feedback').empty();
+      $('#feedback-input').empty();
       // mandrill._domainkey.ceciliabrush.com
 // v=DKIM1; k=rsa; p=MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQCrLHiExVd55zd/IQ/J/mRwSRMAocV/hMB3jXwaHH36d9NaVynQFYV8NaWi69c1veUtRzGt7yAioXqLj7Z4TeEUoOLgrKsn8YnckGs9i3B3tVFB+Ch/4mPhXWiNfNdynHWBcPcbJ8kjEQ2U8y78dHZj1YeRXXVvWob2OaKynO8/lQIDAQAB;
     })
