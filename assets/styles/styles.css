@@ -296,6 +296,9 @@ textarea {
   .socials a {
     margin: 0 !important;
   }
+  #picture-frame.still-loading {
+    background-color: transparent;
+  }
 }
 
 @media(min-width:1200px) {
@@ -308,22 +311,15 @@ textarea {
 }
 
 @media(min-width: 992px) {
-  .video-js .vjs-control-bar {
-    left: 29.5%;
-  }
 
 }
 
 @media(min-width: 768px) {
-  .video-js .vjs-control-bar {
-    left: 23%;
-  }
+  
 }
 
 @media (min-width: 576px) {
-   .video-js .vjs-control-bar {
-     left: 14%;
-   }
+  
 }
 
 @keyframes spinner {
