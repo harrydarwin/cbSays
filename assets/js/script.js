@@ -349,7 +349,7 @@ cbApp.createNewQrCode = function() {
     });
 
     $('#qr').qrcode({
-      text: newPage.href,
+      text: "https://harrydarwin.github.io/staySilky/",
       render: "canvas",  // 'canvas' or 'table'. Default value is 'canvas'
       background: "#ffffff",
       foreground: "#000000",
